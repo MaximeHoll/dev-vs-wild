@@ -8,7 +8,7 @@ const db = {}
 db.Sequelize = Sequelize
 db.sequelize = sequelize
 
-
+db.users=require('./User')(sequelize, DataTypes)
 
 //Relationships between models
 

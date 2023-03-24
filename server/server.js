@@ -26,9 +26,13 @@ const app = express();
 app.use(cors({ origin: "http://localhost:3000", credentials: true }))
 app.use(express.json())
 
+//routes variables
+
+const authRoutes = require('./routes/auth.routes')
 
 //routes
 
+app.use('/api/auth', authRoutes)
 
 //app listen
 
