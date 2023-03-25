@@ -17,8 +17,8 @@
           <p class="card-location text-base text-gray-500">{{ tree.specie }}</p>
         </div>
         <div class="card-buttons p-6 flex justify-between items-center">
-          <button class="btn btn-pass text-gray-700 bg-gray-200 hover:bg-gray-300 uppercase tracking-wide font-semibold py-3 px-6 rounded-full" @click="passCard">Pass</button>
-          <button class="btn btn-like text-hite bg-pink-500 hover:bg-pink-600 uppercase tracking-wide font-semibold py-3 px-6 rounded-full" @click="likeCard">Like</button>
+          <button class="btn btn-pass text-gray-700 bg-gray-200 hover:bg-gray-300 uppercase tracking-wide font-semibold py-3 px-4 rounded-full" @click="passCard">Pass</button>
+          <button class="btn btn-like text-hite bg-pink-500 hover:bg-pink-600 uppercase tracking-wide font-semibold py-3 px-4 rounded-full" @click="likeCard">Smash</button>
         </div>
       </div>
     </div>
