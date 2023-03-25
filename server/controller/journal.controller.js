@@ -3,7 +3,7 @@ const asyncHandler = require("express-async-handler");
 const Journal = db.journal;
 
 const getAll = asyncHandler(async (req, res) => {
-        const entries = await Journal.findAll({where: {id_user: req.body.id_user}});
+        const entries = await Journal.findAll();
         res.status(200).json(entries);
 });
 
