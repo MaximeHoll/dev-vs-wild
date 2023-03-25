@@ -10,4 +10,7 @@ router.route('/')
 router.route('/')
     .post(journalController.newEntry)
 
+router.route('/:id_entry')
+    .get(journalController.getSpecific)
+
 module.exports = router;
