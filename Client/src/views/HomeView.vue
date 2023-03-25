@@ -66,8 +66,6 @@ const breakpoints = {
   <div class="flex justify-center pt-4 pb-2">
     <h2 class="font-Outfit text-greyh text-4xl">Choisis ton <span class="text-bleuh">outil</span></h2>
   </div>
-
-  <Footer />
 </template>
 
 
