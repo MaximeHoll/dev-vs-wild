@@ -23,7 +23,7 @@ db.sequelize.sync({ force: false }).then(() => {
 
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
 
 //routes variables
@@ -32,6 +32,8 @@ const authRoutes = require('./routes/auth.routes')
 const usersRoutes = require('./routes/users.routes')
 const timbRoutes = require("./routes/timder.routes");
 const journalRoutes = require("./routes/journal.routes");
+const itemsRoutes = require("./routes/items.routes")
+
 
 //routes
 
@@ -39,6 +41,7 @@ app.use('/api/auth', authRoutes)
 app.use('/api/users', usersRoutes)
 app.use("/api/timder", timbRoutes);
 app.use("/api/journal", journalRoutes);
+app.use("/api/items", itemsRoutes)
 
 //app listen
 
