@@ -20,8 +20,13 @@ const router = createRouter({
     // },
     {
       path: '/timbder',
-      name: 'TimbderVue',
-      component: TimbderVue,
+      name: 'timbder',
+      component: () => import('../views/TimbderVue.vue')
+    },
+    {
+      path: '/LoupePlante',
+      name: 'LoupePlante',
+      component: () => import('../views/LoupePlanteView.vue')
 
     },
     {
