@@ -10,7 +10,7 @@ import RepulseBearContent from '../components/RepulseBearContent.vue';
 import timderContent from '../components/timderContent.vue';
 
 const slides = [
-  { id: 1, title: 'Journal de Bord', button: 'Ajouter une note',button2: null,text:null, text2:null },
+  { id: 1, title: 'Journal de Bord', button: 'src/assets/images/writing.png',button2: null,text:null, text2:null },
   { id: 2, title: 'PlantePedia', button: 'src/assets/images/camera.png',button2: null,text:'Photographiez vos alentours pour vous aider à survivre !' },
   { id: 3, title: 'Repulse Bear', button1: 'src/assets/images/teddy-bear.png',button2: 'src/assets/images/close.png',text:'Ecartez les ours de l’Oregon grâce à ce bruit redoutable !' },
   { id: 4, title: 'Craft', button: 'src/assets/images/school-bag.png',button2: null, text:'Listez les éléments de votre sac pour savoir comment survivre !' },
