@@ -63,10 +63,11 @@ const maxIndex = computed(() => {
 }
 
 .card-container {
-  width: 90%;
-  max-width: 400px;
+  width: 250px;
   height: 500px;
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
   perspective: 1000px;
 }
 
