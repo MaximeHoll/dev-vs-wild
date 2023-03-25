@@ -4,6 +4,6 @@
 
 <template>
   <main>
-    
+    <p>oui</p>
   </main>
 </template>
