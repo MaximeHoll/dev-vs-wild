@@ -18,9 +18,11 @@
       </l-marker>
     </l-map>
   </div>
+  <ButtonBear :markers="markers"></ButtonBear>
 </template>
 <script>
 import { LMap, LTileLayer, LMarker, LIcon } from "@vue-leaflet/vue-leaflet";
+import ButtonBear from "../components/ButtonBear.vue";
 import "leaflet/dist/leaflet.css";
 export default {
   components: {
@@ -28,6 +30,7 @@ export default {
     LTileLayer,
     LMarker,
     LIcon,
+    ButtonBear,
   },
   data() {
     return {
@@ -54,10 +57,6 @@ export default {
         id: 2,
         coords: [50.457676899890096, 3.9372182785976038],
       });
-      // this.$emit("marker");
-    },
-    cancel() {
-      this.markers.splice(1, 1);
     },
   },
 

@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import TimbderVue from "../views/TimbderVue.vue";
 import HomeView from "../views/HomeView.vue";
 
 const router = createRouter({
@@ -32,6 +31,11 @@ const router = createRouter({
       path: "/Inventory",
       name: "Inventory",
       component: () => import("../views/InventaireView.vue"),
+    },
+    {
+      path: "/Map",
+      name: "Map",
+      component: () => import("../views/Map.vue"),
     },
   ],
 });
