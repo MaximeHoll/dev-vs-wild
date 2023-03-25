@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { createRouter, createWebHistory } from "vue-router";
-import TimbderVue from "../views/TimbderVue.vue";
-import HomeView from "../views/HomeView.vue";
+import HomeView from "../views/TimbderVue.vue";
+import AboutView from "../views/AboutView.vue";
+=======
+import { createRouter, createWebHistory } from 'vue-router'
+import TimbderVue from '../views/TimbderVue.vue'
+import HomeView from '../views/HomeView.vue'
+>>>>>>> main
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
