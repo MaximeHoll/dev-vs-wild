@@ -30,7 +30,7 @@ import {computed, onMounted, reactive, ref, toRefs} from 'vue'
 import axios from 'axios'
 
 const getTrees = async function () {
-  const response = await axios.get('http://localhost:3306/api/timder/')
+  const response = await axios.get('http://localhost:5002/api/timder/')
   console.log(response.data)
   return response.data
 }
