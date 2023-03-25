@@ -2,10 +2,10 @@
   <div>
     <h1 class="text-center text-4xl">New Entry</h1>
     <div class="text-center">
-    <form id="newEntry">
-      <textarea />
+    <form id="newEntry" v-on:submit.prevent="addEntry">
+      <textarea id="entry"/>
       <br>
-      <button type="submit">Send Entry</button>
+      <button type="submit">New Entry</button>
     </form>
     </div>
     <h2 class="text-center text-4xl">Journal</h2>
@@ -25,10 +25,16 @@ import moment from 'moment';
 const entries = ref([]);
 
 const setEntries = async () => {
-  const response = await axios.get('http://localhost:3306/api/journal');
+  const response = await axios.get('http://localhost:5002/api/journal');
   entries.value = response.data;
   console.log(response)
 }
 
 setEntries();
+
+const addEntry = async () => {
+  const response = await axios.post('http://localhost:5002/api/journal', {
+    "entry": "test",
+    "entry_type": "entry"
+  })};
 </script>
