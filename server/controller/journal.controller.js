@@ -7,6 +7,12 @@ const getAll = asyncHandler(async (req, res) => {
         res.status(200).json(entries);
 });
 
+const getSpecific = asyncHandler(async (req, res) => {
+    id_entry = req.params.id_entry
+    const entry = await Journal.findByPk(id_entry)
+    res.status(200).json(entry)
+})
+
 const newEntry = asyncHandler(async(req, res) => {
     const { entry, entryType, id_user } = req.body;
     if (!entry) return "The entry cannot be empty";
@@ -21,5 +27,6 @@ const newEntry = asyncHandler(async(req, res) => {
 
 module.exports = {
     getAll,
-    newEntry
+    newEntry,
+    getSpecific
 }
