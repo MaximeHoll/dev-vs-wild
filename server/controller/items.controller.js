@@ -65,18 +65,18 @@ const craft = asyncHandler(async (req,res) =>{
     const foundInventory1 = await Inventory.findOne({where:{id_user, id_item: item1}})
     const foundInventory2 = await Inventory.findOne({where:{id_user, id_item: item2}})
 
-    if(foundInventory1.quantity >= 1) {
+    if(foundInventory1.quantity > 1) {
         foundInventory1.quantity = (foundInventory1.quantity - 1)
         await foundInventory1.save()
     }
-    if(foundInventory2.quantity >= 1) {
+    if(foundInventory2.quantity > 1) {
         foundInventory2.quantity = (foundInventory2.quantity - 1)
         await foundInventory2.save()
     }
-    if(foundInventory1.quantity < 1) {
+    if(foundInventory1.quantity <= 1) {
         await Inventory.destroy({where:{id_user, id_item: item1}})
     }
-    if(foundInventory1.quantity < 1) {
+    if(foundInventory1.quantity <= 1) {
         await Inventory.destroy({where:{id_user, id_item: item2}})
     }
 
