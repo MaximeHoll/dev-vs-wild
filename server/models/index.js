@@ -17,7 +17,6 @@ db.inventories=require("./Inventory")(sequelize, DataTypes)
 //Relationships between models
 
 db.users.hasMany(db.journal, {foreignKey: 'id_user'});
-db.journal.belongsTo(db.users);
 
 db.users.belongsToMany(db.items, { through: db.inventories, foreignKey: "id_user" })
 db.items.belongsToMany(db.users, { through: db.inventories, foreignKey: "id_item" })
