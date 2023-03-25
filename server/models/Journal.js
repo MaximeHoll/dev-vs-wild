@@ -1,26 +1,26 @@
 module.exports = (sequelize, DataTypes) => {
-    const User = sequelize.define("users", {
-        id_user: {
+    const Journal = sequelize.define("journal", {
+        id_entry: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
-            primaryKey: true,
+            primaryKey: true
         },
-        username: {
+        entry: {
+            type: DataTypes.TEXT,
+            required: true
+        },
+        entry_type: {
             type: DataTypes.STRING(30),
             required: true
         },
-        password: {
-            type: DataTypes.STRING(300),
-            required: true
-        },
-        date_creation: {
+        creation_date: {
             type: "TIMESTAMP",
             defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
             allowNull: false,
         }
     }, {timestamps: false, freezeTableName: true});
-    
-    
-    return User
-    
-    }
+
+
+    return Journal
+
+}
