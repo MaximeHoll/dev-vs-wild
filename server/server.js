@@ -30,10 +30,13 @@ app.use(express.json());
 
 const authRoutes = require("./routes/auth.routes");
 const timbRoutes = require("./routes/timder.routes");
+const journalRoutes = require("./routes/journal.routes");
+
 //routes
 
 app.use("/api/auth", authRoutes);
 app.use("/api/timder", timbRoutes);
+app.use("/api/journal", journalRoutes);
 
 //app listen
 
