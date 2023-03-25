@@ -14,13 +14,15 @@ const getSpecific = asyncHandler(async (req, res) => {
 })
 
 const newEntry = asyncHandler(async(req, res) => {
-    const { entry, entryType, id_user } = req.body;
+    const { entry, entryType } = req.body;
     if (!entry) return "The entry cannot be empty";
     if (!entryType) return "Please select a type of entry";
     const entryValue = new Journal({
         entry: entry,
         entry_type: entryType,
-        id_user: id_user
+        entry_coords: '50.461137355448294, 3.9452305086260693',
+        id_user: '2',
+        creation_date: Date.now()
     })
     res.status(200).json(entryValue)
 })
