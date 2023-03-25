@@ -22,6 +22,11 @@ const router = createRouter({
       name: 'timbder',
       component: () => import('../views/TimbderVue.vue')
 
+    },
+    {
+      path: '/Inventory',
+      name: 'Inventory',
+      component: () => import('../views/InventaireView.vue')
     }
   ]
 })
