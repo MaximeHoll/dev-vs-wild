@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     "arbres_tinder",
     {
       id_arbre: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
       },
