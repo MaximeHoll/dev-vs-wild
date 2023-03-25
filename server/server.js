@@ -29,10 +29,12 @@ app.use(express.json())
 //routes variables
 
 const authRoutes = require('./routes/auth.routes')
+const usersRoutes = require('./routes/users.routes')
 
 //routes
 
 app.use('/api/auth', authRoutes)
+app.use('/api/users', usersRoutes)
 
 //app listen
 
