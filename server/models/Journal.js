@@ -1,16 +1,16 @@
 module.exports = (sequelize, DataTypes) => {
-    const User = sequelize.define("users", {
-        id_user: {
+    const Journal = sequelize.define("journal", {
+        id_entry: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
-            primaryKey: true,
+            primaryKey: true
         },
-        username: {
-            type: DataTypes.STRING(30),
+        entry: {
+            type: DataTypes.TEXT,
             required: true
         },
-        password: {
-            type: DataTypes.STRING(300),
+        entry_type: {
+            type: DataTypes.STRING(30),
             required: true
         },
         creation_date: {
@@ -19,8 +19,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         }
     }, {timestamps: false, freezeTableName: true});
-    
-    
-    return User
-    
-    }
+
+
+    return Journal
+
+}
