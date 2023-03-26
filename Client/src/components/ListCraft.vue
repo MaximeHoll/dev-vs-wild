@@ -1,18 +1,22 @@
 <template>
-    <ul class="flex flex-wrap gap-1 justify-center w-full">
-        <li v-for="item in inventaire" :key="item.id" @click="swap(item) " class="bg-red-500 w-24 h-24">
-            {{ item.craft.name }} - {{ selected.ingredients['1'].id_item }}
-        </li>
-    </ul>
-    <div class="bg-blue-200">
-        <div class="flex justify-center items-center">
-            <div class="bg-red-500 w-24 h-24">{{ selected.craft.craft.items[0] }}</div>
-            <div>+</div>
-            <div class="bg-red-500 w-24 h-24">{{selected.craft.craft.items[1]==null?"":selected.craft.craft.items[1]}}</div>
-        </div>
-        
-        <div class="flex justify-center" @click="crafteur">crafter</div>
+    <div class="flex justify-center">
+        <div class="w-72 h-[28rem] bg-greenh rounded-2xl z-50 bg-opacity-80 p-4">
+            <ul class="flex flex-wrap gap-3 justify-center w-full">
+                <li v-for="item in inventaire" :key="item.id" @click="swap(item) " class="bg-white font-Outfit shadow-2xl p-2 rounded-2xl w-24 h-24 ">
+                    {{ item.craft.name }} - {{ selected.ingredients['1'].id_item }}
+                </li>
+            </ul>
+            <div class="">
+                <div class="flex justify-center items-center mt-3">
+                    <div class="bg-white font-Outfit shadow-2xl p-2 rounded-2xl">{{ selected.craft.craft.items[0] }}</div>
+                    <div class="p-2 font text-2xl">+</div>
+                    <div class="bg-white font-Outfit shadow-2xl p-2 rounded-2xl">{{selected.craft.craft.items[1]==null?"":selected.craft.craft.items[1]}}</div>
+                </div>
+                
+                <div class="font-Outfit flex justify-center mt-3" @click="crafteur">Crafter</div>
+            </div>
     </div>
+</div>
 </template>
 
 <script setup>

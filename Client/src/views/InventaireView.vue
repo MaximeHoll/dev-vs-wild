@@ -1,7 +1,7 @@
 <template>
-    <MenuInv @page="curentPage = $event" />
-    <ListItems v-if="curentPage === 'inv'" />
-    <ListCraft v-if="curentPage === 'craft'" />
+        <MenuInv @page="curentPage = $event" />
+        <ListItems v-if="curentPage === 'inv'" />
+        <ListCraft v-if="curentPage === 'craft'" />
 </template>
 
 <script setup>
