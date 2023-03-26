@@ -4,7 +4,7 @@
       <div
         v-for="(tree, index) in trees"
         :key="tree.id_arbre"
-        class="card absolute top-0 left-0 w-90 max-w-400 h-500 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300"
+        class="card absolute top-0 left-0 w-90 max-w-400 h-400 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300"
         :style="{
           zIndex: trees.length - index,
           transform: `translateX(${index * 10}px) translateY(-${
@@ -26,16 +26,16 @@
         </div>
         <div class="card-buttons p-6 flex justify-between items-center">
           <button
-            class="btn btn-pass text-gray-700 bg-gray-200 hover:bg-gray-300 uppercase tracking-wide font-semibold py-3 px-6 rounded-full"
+            class="btn btn-pass text-gray-700 bg-gray-200 hover:bg-gray-300 uppercase tracking-wide font-semibold py-3 px-4 rounded-full"
             @click="passCard"
           >
             Pass
           </button>
           <button
-            class="btn btn-like text-hite bg-pink-500 hover:bg-pink-600 uppercase tracking-wide font-semibold py-3 px-6 rounded-full"
+            class="btn btn-like text-hite bg-pink-500 hover:bg-pink-600 uppercase tracking-wide font-semibold py-3 px-4 rounded-full"
             @click="likeCard"
           >
-            Like
+            Smash
           </button>
         </div>
       </div>
@@ -48,7 +48,7 @@ import { computed, onMounted, reactive, ref, toRefs } from "vue";
 import axios from "axios";
 
 const getTrees = async function () {
-  const response = await axios.get("http://localhost:3306/api/timder/");
+  const response = await axios.get("http://localhost:5002/api/timder/");
   console.log(response.data);
   return response.data;
 };
@@ -79,10 +79,11 @@ const maxIndex = computed(() => {
 }
 
 .card-container {
-  width: 90%;
-  max-width: 400px;
+  width: 250px;
   height: 500px;
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
   perspective: 1000px;
 }
 
