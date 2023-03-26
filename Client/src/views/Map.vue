@@ -13,8 +13,8 @@
         v-for="marker in markers"
         :key="marker.id"
         :lat-lng="marker.coords"
+        :icon="createIcon(marker.iconUrl)"
       >
-        <!-- <l-icon ref="icon" icon-url="../../public/ours.svg"> </l-icon> -->
       </l-marker>
     </l-map>
   </div>
@@ -24,6 +24,7 @@
 import { LMap, LTileLayer, LMarker, LIcon } from "@vue-leaflet/vue-leaflet";
 import ButtonBear from "../components/ButtonBear.vue";
 import "leaflet/dist/leaflet.css";
+import { icon } from "leaflet";
 export default {
   components: {
     LMap,
@@ -41,10 +42,17 @@ export default {
         {
           id: 1,
           coords: [50.45862544533557, 3.941501851087473],
+          iconUrl: "../../public/walker.svg",
         },
       ],
+      icon: icon({
+        iconUrl: "../../public/ours.svg",
+        iconSize: [32, 37],
+        iconAnchor: [16, 37],
+      }),
     };
   },
+
   methods: {
     centerUpdate(center) {
       this.center = center;
@@ -56,12 +64,28 @@ export default {
       this.markers.push({
         id: 2,
         coords: [50.457676899890096, 3.9372182785976038],
+        iconUrl: ".../../public/ours.svg",
       });
+    },
+    createIcon(iconUrl) {
+      return icon({
+        iconUrl: iconUrl,
+        iconSize: [32, 37],
+        iconAnchor: [16, 37],
+      });
+    },
+  },
+  computed: {
+    dynamicSize() {
+      return [this.iconSize, this.iconSize * 1.15];
+    },
+    dynamicAnchor() {
+      return [this.iconSize / 2, this.iconSize * 1.15];
     },
   },
 
   created() {
-    this.interval = setInterval(() => this.generateBear(), 10000);
+    this.interval = setInterval(() => this.generateBear(), 30000);
   },
 };
 </script>
