@@ -15,16 +15,16 @@
         <p>Envoie une photo d'une jolie plante...</p>
       </div>
 
-      <div v-if="plants" class="grid grid-cols-1 gap-4 w-10/12 mr-auto ml-auto">
+      <div v-if="plants" class="grid grid-cols-1 gap-4 w-10/12 mr-auto ml-auto pb-28">
         <div v-for="plant in plants" :key="plant.id">
           <img :src="plant.similar_images[0].url" class="w-full h-auto mb-4" />
           <div class="flex items-center gap-1">
             <span class="text-lg mb-2">Nom:</span>
             <h2 class="text-lg font-bold mb-2"> {{ plant.plant_name }}</h2>
           </div>
-          <span class="text-base font-bold mb-2">Nom également utilisé: </span>
+          <span class="text-base mb-2">Nom également utilisé: </span>
           <template v-for="(name, index) in plant.plant_details.common_names">
-            <span class="text-sm">{{ name }}</span><span v-if="index < plant.plant_details.common_names.length - 1">, </span>
+            <span class="text-sm font-bold">{{ name }}</span><span v-if="index < plant.plant_details.common_names.length - 1">, </span>
           </template>
         </div>
       </div>
