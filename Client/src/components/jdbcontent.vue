@@ -16,9 +16,9 @@
                   <LvProgressBar :value="valueFood" color="#F39B6A" />
             </div>
 
-            <button class="bg-greyh pt-4 pb-4 pl-12 pr-12 rounded-3xl">
+            <a href="/journal"><button class="bg-greyh pt-4 pb-4 pl-12 pr-12 rounded-3xl">
                   <img :src="`${slide.button}`" class="w-20 z-50"/>
-            </button>
+            </button></a>
       </div>
 </template>
 

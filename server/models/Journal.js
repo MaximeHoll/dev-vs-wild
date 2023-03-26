@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(30),
             required: true
         },
+        entry_coords: {
+            type: DataTypes.STRING,
+            required: true,
+        },
         creation_date: {
             type: "TIMESTAMP",
             defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),

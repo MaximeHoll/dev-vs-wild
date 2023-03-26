@@ -3,7 +3,7 @@ const asyncHandler = require("express-async-handler");
 const Journal = db.journal;
 
 const getAll = asyncHandler(async (req, res) => {
-        const entries = await Journal.findAll();
+        const entries = await Journal.findAll({order: [ ['creation_date', 'DESC']]})
         res.status(200).json(entries);
 });
 
@@ -14,14 +14,15 @@ const getSpecific = asyncHandler(async (req, res) => {
 })
 
 const newEntry = asyncHandler(async(req, res) => {
-    const { entry, entryType, id_user } = req.body;
+    const { entry, entryType, coords, user } = req.body;
+    console.log(entry);
     if (!entry) return "The entry cannot be empty";
-    if (!entryType) return "Please select a type of entry";
-    const entryValue = new Journal({
-        entry: entry,
+    const entryValue = Journal.create({
+        entry,
         entry_type: entryType,
-        id_user: id_user
-    })
+        entry_coords: coords,
+        user
+    });
     res.status(200).json(entryValue)
 })
 
