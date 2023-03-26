@@ -72,7 +72,7 @@ export default {
       this.$refs.alert.showAlert(
         "warning",
         "Effraie le vite avec du bruit",
-        "Ours Incoming",
+        "The Bear Is Coming For Ya",
         { iconSize: 35, iconType: "solid", position: "top right" }
       );
     },
