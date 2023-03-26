@@ -37,8 +37,7 @@ const router = createRouter({
       name: "Map",
       component: () => import("../views/Map.vue"),
     },
-  ],
-});
+    {
       path: '/Inventory',
       name: 'Inventory',
       component: () => import('../views/InventaireView.vue')
@@ -48,7 +47,8 @@ const router = createRouter({
       name: 'Journal',
       component: () => import('../views/JournalView.vue')
     }
-  ]
-})
+  ],
+});
+
 
 export default router;
