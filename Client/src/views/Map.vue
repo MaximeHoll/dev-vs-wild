@@ -1,5 +1,5 @@
 <template>
-  <vue-basic-alert :duration="300" ref="alert" />
+  <vue-basic-alert :duration="300" :close-in="3000" ref="alert" />
   <div class="center">
     <l-map
       :center="center"
@@ -71,8 +71,8 @@ export default {
       });
       this.$refs.alert.showAlert(
         "warning",
-        "Effraie le vite avec du bruit",
-        "The Bear Is Coming For Ya",
+        "Repousse le",
+        "Un Ours est apparu",
         { iconSize: 35, iconType: "solid", position: "top right" }
       );
     },
@@ -102,11 +102,11 @@ export default {
 .map {
   /* position: absolute; */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   /* overflow: hidden; */
 }
 .center {
-  width: 400px;
-  height: 700px;
+  width: 100%;
+  height: 76vh;
 }
 </style>
