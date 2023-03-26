@@ -37,6 +37,11 @@ const router = createRouter({
       name: "Map",
       component: () => import("../views/Map.vue"),
     },
+    {
+      path: "/Craft",
+      name: "Craft",
+      component: () => import("../views/InventaireView.vue"),
+    },
   ],
 });
 
