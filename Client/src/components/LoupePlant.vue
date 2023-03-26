@@ -1,26 +1,31 @@
 <template>
   <div class="container mx-auto">
-    <h1 class="text-3xl font-bold text-center my-8">Plant Identifier</h1>
+    <h1 class="text-6xl font-bold text-center my-4 font-kage">PlantPedia</h1>
 
     <div class="flex flex-col items-center">
       <div class="mb-4">
-        <label for="fileInput" class="block text-lg font-medium text-gray-700">Select an image of a plant:</label>
-        <input type="file" id="fileInput" accept="image/*" @change="onFileSelected">
+        <label v-if="!plants" for="fileInput" class="block text-lg font-medium text-gray-700">Choisis l'image d'une plante: </label>
+        <input class="block w-full text-sm text-gray-500 file:py-2 file:px-6 file:rounded file:border-1 file:border-gray-400 file:bg-bleuh file:text-white" type="file" id="fileInput" accept="image/*" @change="onFileSelected">
       </div>
-
       <div v-if="isLoading" class="text-center">
-        <p>Loading...</p>
+        <p>Chargement...</p>
       </div>
 
       <div v-if="!isLoading && !plants" class="text-center">
-        <p>Something went wrong. Please try again later.</p>
+        <p>Envoie une photo d'une jolie plante...</p>
       </div>
 
-      <div v-if="plants" class="grid grid-cols-3 gap-4">
+      <div v-if="plants" class="grid grid-cols-1 gap-4 w-10/12 mr-auto ml-auto pb-28">
         <div v-for="plant in plants" :key="plant.id">
           <img :src="plant.similar_images[0].url" class="w-full h-auto mb-4" />
-          <h2 class="text-lg font-bold mb-2">{{ plant.plant_name }}</h2>
-          <p>{{ plant.plant_details.common_names }}</p>
+          <div class="flex items-center gap-1">
+            <span class="text-lg mb-2">Nom:</span>
+            <h2 class="text-lg font-bold mb-2"> {{ plant.plant_name }}</h2>
+          </div>
+          <span class="text-base mb-2">Nom également utilisé: </span>
+          <template v-for="(name, index) in plant.plant_details.common_names">
+            <span class="text-sm font-bold">{{ name }}</span><span v-if="index < plant.plant_details.common_names.length - 1">, </span>
+          </template>
         </div>
       </div>
     </div>

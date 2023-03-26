@@ -3,7 +3,9 @@
         <div class="w-72 h-[28rem] bg-greenh rounded-2xl z-50 bg-opacity-80 p-4">
             <ul class="flex flex-wrap mt-3 gap-3 justify-center w-full">
                 <li v-for="item in inventaire" :key="item.id" class="bg-white font-Outfit shadow-2xl p-2 rounded-2xl w-24 h-24 ">
-                    {{ item.name }} - {{ item.inventories.quantity }}
+                    <img :src="`./items/${item.id_item}.png`" alt="">
+                    <p>{{ item.name }}</p>
+                    <p>{{ item.inventories.quantity }}</p>
                 </li>
             </ul>
         </div>

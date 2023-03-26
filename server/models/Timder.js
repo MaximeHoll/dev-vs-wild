@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         required: true,
       },
       age: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         required: true,
       },
       description: {
