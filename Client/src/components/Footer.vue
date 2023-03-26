@@ -1,5 +1,5 @@
 <template>
-      <div class="bg-white w-16 h-16 rounded-full ml-8 flex justify-center items-center">
+      <div class="bg-white w-16 h-16 rounded-full ml-8 flex justify-center items-center fixed bottom-8">
             <img :src="`../src/assets/images/rainy.png`" class="w-8">
       </div>
       <div class="bg-white h-6 w-full fixed bottom-0 left-0 flex justify-center">

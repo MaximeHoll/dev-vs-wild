@@ -1,14 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import TimbderVue from '../views/TimbderVue.vue'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: () => import('../views/HomeView.vue')
+      path: "/",
+      name: "home",
+      component: () => import("../views/HomeView.vue"),
     },
     // {
     //   path: '/about',
@@ -19,17 +18,27 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue')
     // },
     {
-      path: '/timbder',
-      name: 'timbder',
-      component: () => import('../views/TimbderVue.vue')
+      path: "/timbder",
+      name: "timbder",
+      component: () => import("../views/TimbderVue.vue"),
     },
     {
-      path: '/LoupePlante',
-      name: 'LoupePlante',
-      component: () => import('../views/LoupePlanteView.vue')
-
+      path: "/LoupePlante",
+      name: "LoupePlante",
+      component: () => import("../views/LoupePlanteView.vue"),
     },
     {
+      path: "/Inventory",
+      name: "Inventory",
+      component: () => import("../views/InventaireView.vue"),
+    },
+    {
+      path: "/Map",
+      name: "Map",
+      component: () => import("../views/Map.vue"),
+    },
+  ],
+});
       path: '/Inventory',
       name: 'Inventory',
       component: () => import('../views/InventaireView.vue')
@@ -42,4 +51,4 @@ const router = createRouter({
   ]
 })
 
-export default router
+export default router;
