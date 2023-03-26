@@ -3,7 +3,7 @@
     <h1 class="text-center text-4xl">New Entry</h1>
     <div class="text-center">
     <form id="newEntry" v-on:submit.prevent="addEntry">
-      <textarea id="entry"/>
+      <input type="text" id="entry"/>
       <br>
       <button type="submit">New Entry</button>
     </form>
