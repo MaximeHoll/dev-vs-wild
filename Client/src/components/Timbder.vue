@@ -4,7 +4,7 @@
       <div
           v-for="(tree, index) in trees"
           :key="tree.id_arbre"
-          class="card absolute top-0 left-0 w-90 max-w-400 h-500 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300"
+          class="card absolute top-0 left-0 w-90 max-w-400 h-400 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300"
           :style="{
           zIndex: trees.length - index,
           transform: `translateX(${index * 10}px) translateY(-${index * 10}px) rotate(${index * -2}deg)${index <= maxIndex ? ` translateZ(${(maxIndex - index + 1) * 50}px)` : ''}`
@@ -64,7 +64,7 @@ const maxIndex = computed(() => {
 
 .card-container {
   width: 250px;
-  height: 500px;
+  height: 400px;
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -74,6 +74,7 @@ const maxIndex = computed(() => {
 .card {
   transform-origin: bottom center;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  height: 400px;
 }
 
 .card:first-child {
