@@ -94,7 +94,7 @@ export default {
   },
 
   created() {
-    this.interval = setInterval(() => this.generateBear(), 30000);
+    this.interval = setInterval(() => this.generateBear(), 15000);
   },
 };
 </script>
