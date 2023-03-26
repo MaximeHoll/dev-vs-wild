@@ -1,7 +1,10 @@
 <template>
     <ul class="flex flex-wrap gap-1 justify-center w-full">
-        <li v-for="item in inventaire" :key="item.id" class="bg-red-500 w-24 h-24">
-            {{ item.name }} - {{ item.inventories.quantity }}
+        <li v-for="item in inventaire" :key="item.id" class="bg-redh w-24 h-24">
+            <img :src="`./items/${item.id_item}.png`" alt="">
+            <p>{{ item.name }}</p>
+            <p>{{ item.inventories.quantity }}</p>
+
         </li>
     </ul>
 </template>
