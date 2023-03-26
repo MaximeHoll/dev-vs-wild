@@ -11,6 +11,7 @@
     "axios": "^1.3.4",
     "lightvue": "^1.5.1",
     "vue": "^3.2.47",
+    "vue-basic-alert": "^1.1.0",
     "vue-router": "^4.1.6",
     "vue3-carousel": "^0.2.14"
   },

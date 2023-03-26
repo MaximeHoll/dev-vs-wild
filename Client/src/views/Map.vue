@@ -1,4 +1,5 @@
 <template>
+  <vue-basic-alert :duration="300" ref="alert" />
   <div class="center">
     <l-map
       :center="center"
@@ -25,6 +26,7 @@ import { LMap, LTileLayer, LMarker, LIcon } from "@vue-leaflet/vue-leaflet";
 import ButtonBear from "../components/ButtonBear.vue";
 import "leaflet/dist/leaflet.css";
 import { icon } from "leaflet";
+import VueBasicAlert from "vue-basic-alert";
 export default {
   components: {
     LMap,
@@ -32,6 +34,7 @@ export default {
     LMarker,
     LIcon,
     ButtonBear,
+    VueBasicAlert,
   },
   data() {
     return {
@@ -66,6 +69,12 @@ export default {
         coords: [50.457676899890096, 3.9372182785976038],
         iconUrl: ".../../public/ours.svg",
       });
+      this.$refs.alert.showAlert(
+        "warning",
+        "Effraie le vite avec du bruit",
+        "Ours Incoming",
+        { iconSize: 35, iconType: "solid", position: "top right" }
+      );
     },
     createIcon(iconUrl) {
       return icon({
@@ -85,7 +94,7 @@ export default {
   },
 
   created() {
-    this.interval = setInterval(() => this.generateBear(), 30000);
+    this.interval = setInterval(() => this.generateBear(), 10000);
   },
 };
 </script>
