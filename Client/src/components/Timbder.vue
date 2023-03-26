@@ -64,7 +64,7 @@ const maxIndex = computed(() => {
 
 .card-container {
   width: 250px;
-  height: 400px;
+  height: 500px;
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -74,7 +74,6 @@ const maxIndex = computed(() => {
 .card {
   transform-origin: bottom center;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  height: 400px;
 }
 
 .card:first-child {
