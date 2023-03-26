@@ -1,14 +1,21 @@
 <template>
     <ul class="flex flex-wrap gap-1 justify-center w-full">
-        <li v-for="item in inventaire" :key="item.id" @click="swap(item) " class="bg-red-500 w-24 h-24">
-            {{ item.craft.name }} - {{ selected.ingredients['1'].id_item }}
+        <li v-for="item in inventaire" :key="item.id" @click="swap(item) " class="bg-red-500 w-24 h-24 ">
+            <img :src="`./items/${item.craft.id_item}.png`" alt="">
+            <p>{{ item.craft.name }}</p>
         </li>
     </ul>
     <div class="bg-blue-200">
         <div class="flex justify-center items-center">
-            <div class="bg-red-500 w-24 h-24">{{ selected.craft.craft.items[0] }}</div>
+            <div class="bg-red-500 w-24 h-24">
+                <p>{{ selected.craft.craft.items[0]==null?"":selected.craft.craft.items[0].name }}</p>
+                <img v-if="selected.craft.craft.items[0]!=null" :src="`./items/${selected.ingredients['1'].id_item}.png`" alt="">
+            </div>
             <div>+</div>
-            <div class="bg-red-500 w-24 h-24">{{selected.craft.craft.items[1]==null?"":selected.craft.craft.items[1]}}</div>
+            <div class="bg-red-500 w-24 h-24">
+                <p>{{ selected.craft.craft.items[1]==null?"":selected.craft.craft.items[1].name }}</p>
+                <img v-if="selected.craft.craft.items[1]!=null" :src="`./items/${selected.ingredients['2'].id_item}.png`" alt="">
+            </div>
         </div>
         
         <div class="flex justify-center" @click="crafteur">crafter</div>
