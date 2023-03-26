@@ -3,7 +3,7 @@ import Journal from '../components/Journal.vue'
 </script>
 
 <template>
-  <div class="bg-red-500">
+  <div>
     <Journal />
   </div>
 </template>

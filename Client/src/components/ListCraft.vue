@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center">
-        <div class="w-72 max-h-80 overflow-scroll bg-greenh rounded-2xl z-50 bg-opacity-80 p-4">
+        <div class="w-72 h-140 overflow-scroll bg-greenh rounded-2xl z-50 bg-opacity-80 p-4">
             <ul class="flex flex-wrap mt-3 gap-3 justify-center w-full">
                 <li v-for="item in inventaire" :key="item.id" @click="swap(item) " class="bg-white font-Outfit flex flex-wrap justify-center shadow-2xl p-1 rounded-2xl w-28 h-28">
                     <img class="flex justify-center w-3/4 h-3/4" :src="`./items/${item.craft.id_item}.png`" alt="">

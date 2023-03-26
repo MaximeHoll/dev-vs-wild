@@ -7,7 +7,13 @@ html{
       background-color: #E1E5F2;
       margin: 0;
       max-height: 100vh;
+      font-family: 'Outfit', sans-serif;
 }
+
+a, button {
+    cursor: pointer;
+}
+
  #app{
       overflow: hidden;
  } 

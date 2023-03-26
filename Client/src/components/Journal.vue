@@ -1,25 +1,12 @@
 <template>
   <header class="flex justify-end relative pt-4 pr-4">
-    <img
-      :src="`src/assets/images/user.png`"
-      class="rounded-full bg-slate-300 w-1/6 absolute"
-    />
-    <div
-      class="bg-transparent border-2 border-white top-[-20px] right-[-20px] w-32 h-32 rounded-full absolute"
-    ></div>
-    <div
-      class="bg-transparent border-2 border-white top-[-60px] right-[-60px] w-56 h-56 rounded-full absolute"
-    ></div>
-    <div
-      class="bg-transparent border-2 border-white top-[-100px] right-[-100px] w-80 h-80 rounded-full absolute"
-    ></div>
+    <img src="https://media.licdn.com/dms/image/C4D03AQEIJsIZ4mTVuQ/profile-displayphoto-shrink_100_100/0/1607109085906?e=1685577600&v=beta&t=e_HzCozu9l8XeDHg7Rhu0iqGoqGoCthYmyEeir_szZQ" class="rounded-full bg-slate-300 w-1/6 absolute right-2 top-2">
+    <div class="bg-transparent border-2 border-white top-[-20px] right-[-20px] w-32 h-32 rounded-full absolute"></div>
+    <div class="bg-transparent border-2 border-white top-[-60px] right-[-60px] w-56 h-56 rounded-full absolute"></div>
+    <div class="bg-transparent border-2 border-white top-[-100px] right-[-100px] w-80 h-80 rounded-full absolute"></div>
   </header>
-  <div class="flex justify-center pt-16 pb-8">
-    <h1 class="text-5xl font-kage z-50">
-      Welcome <span class="text-greenh">Luka</span>
-    </h1>
-  </div>
-  <div class="flex w-full justify-center items-center">
+
+  <div class="flex w-full justify-center items-center mt-28">
     <div
       class="w-[95vw] h-[65vh] text-center bg-greenh rounded-2xl z-50 bg-opacity-80 p-4 overflow-y-scroll"
     >
