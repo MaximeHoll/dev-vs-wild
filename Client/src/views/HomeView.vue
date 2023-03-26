@@ -14,7 +14,8 @@ const slides = [
   { id: 2, title: 'PlantePedia', button: 'src/assets/images/camera.png',button2: null,text:'Photographiez vos alentours pour vous aider à survivre !' },
   { id: 3, title: 'Repulse Bear', button1: 'src/assets/images/teddy-bear.png',button2: 'src/assets/images/close.png',text:'Ecartez les ours de l’Oregon grâce à cet outil !' },
   { id: 4, title: 'Craft', button: 'src/assets/images/school-bag.png',button2: null, text:'Listez les éléments de votre sac pour savoir comment survivre !' },
-  { id: 5, title: 'Timder', button: 'src/assets/images/tinder.png',button2: null, text:'Vous vous sentez seul(e) ? ', text2:'Rencontre les arbres de ta région !' },
+  { id: 5, title: 'Timder', button: 'src/assets/images/tinder.png',button2: null, text:'Vous vous sentez seule ? ', text2:'Rencontre les arbres de ta région !' },
+  
 ]
 
 const breakpoints = {
@@ -52,6 +53,8 @@ const breakpoints = {
         <RepulseBearContent v-else-if="slide.id===3" :slide="slide"/>
         <craftContent v-else-if="slide.id===4" :slide="slide" />
         <timderContent v-else-if="slide.id===5" :slide="slide" />
+        
+        
       </card>
     </slide>
   </template>

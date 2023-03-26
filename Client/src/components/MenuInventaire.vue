@@ -1,8 +1,11 @@
 <template>
-    <nav>
-        <div @click="curentPage = 'inv'">inventaire</div>
-        <div @click="curentPage = 'craft'">crafting</div>
-    </nav>
+        <div class="flex flex-row justify-evenly p-6">
+        <nav class="flex mt-2 ">
+            <div class="flex p-4 m-2 border bg-bleuh font-Outfit text-white rounded-2xl  active:bg-greyh" @click="curentPage = 'inv'">Inventaire</div>
+            <div class="flex p-4 m-2 border bg-bleuh font-Outfit text-white rounded-2xl  active:bg-greyh" @click="curentPage = 'craft'">Crafting</div>
+        </nav>
+        </div>
+
 </template>
 
 <script setup>

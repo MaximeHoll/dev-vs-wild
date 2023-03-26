@@ -1,24 +1,29 @@
 <template>
-    <ul class="flex flex-wrap gap-1 justify-center w-full">
-        <li v-for="item in inventaire" :key="item.id" @click="swap(item) " class="bg-red-500 w-24 h-24 ">
-            <img :src="`./items/${item.craft.id_item}.png`" alt="">
-            <p>{{ item.craft.name }}</p>
-        </li>
-    </ul>
-    <div class="bg-blue-200">
-        <div class="flex justify-center items-center">
-            <div class="bg-red-500 w-24 h-24">
-                <p>{{ selected.craft.craft.items[0]==null?"":selected.craft.craft.items[0].name }}</p>
-                <img v-if="selected.craft.craft.items[0]!=null" :src="`./items/${selected.ingredients['1'].id_item}.png`" alt="">
+    <div class="flex justify-center">
+        <div class="w-72 max-h-80 overflow-scroll bg-greenh rounded-2xl z-50 bg-opacity-80 p-4">
+            <ul class="flex flex-wrap mt-3 gap-3 justify-center w-full">
+                <li v-for="item in inventaire" :key="item.id" @click="swap(item) " class="bg-white font-Outfit flex flex-wrap justify-center shadow-2xl p-1 rounded-2xl w-28 h-28">
+                    <img class="flex justify-center w-3/4 h-3/4" :src="`./items/${item.craft.id_item}.png`" alt="">
+                    <p class=" flex items-start text-xs pb-3 text-center ">{{item.craft.name }}</p>
+                </li>
+            </ul>
+            <div class="">
+                <div class="flex justify-center items-center mt-3">
+                    <div class="bg-white font-Outfit shadow-2xl p-2 rounded-2xl w-32 border-4 border-bleuh">
+                        <p>{{ selected.craft.craft.items[0]==null?"":selected.craft.craft.items[0].name }}</p>
+                        <img v-if="selected.craft.craft.items[0]!=null" :src="`./items/${selected.ingredients['1'].id_item}.png`" alt="">
+                    </div>
+                    <div class="p-3 font text-4xl">+</div>
+                    <div class="bg-white font-Outfit bordershadow-2xl p-2 rounded-2xl w-32 h-24 border-4 border-bleuh">
+                        <p>{{ selected.craft.craft.items[1]==null?"":selected.craft.craft.items[1].name }}</p>
+                        <img v-if="selected.craft.craft.items[1]!=null" :src="`./items/${selected.ingredients['2'].id_item}.png`" alt="">
+                    </div>
+                </div>
+                
+                <div class="font-Outfit flex justify-center mt-3 p-3  bg-white rounded-2xl" @click="crafteur">Crafter</div>
             </div>
-            <div>+</div>
-            <div class="bg-red-500 w-24 h-24">
-                <p>{{ selected.craft.craft.items[1]==null?"":selected.craft.craft.items[1].name }}</p>
-                <img v-if="selected.craft.craft.items[1]!=null" :src="`./items/${selected.ingredients['2'].id_item}.png`" alt="">
-            </div>
+
         </div>
-        
-        <div class="flex justify-center" @click="crafteur">crafter</div>
     </div>
 </template>
 
