@@ -42,6 +42,11 @@ const router = createRouter({
       name: "Craft",
       component: () => import("../views/InventaireView.vue"),
     },
+    {
+      path: "/journal",
+      name: "journal",
+      component: () => import("../views/JournalView.vue"),
+    },
   ],
 });
 
