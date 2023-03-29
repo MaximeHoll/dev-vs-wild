@@ -39,12 +39,12 @@ export default {
   data() {
     return {
       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      center: [50.45862544533577, 3.941501851087473],
+      center: [50.63314124686462, 5.585845981216874],
       zoom: 24,
       markers: [
         {
           id: 1,
-          coords: [50.45862544533557, 3.941501851087473],
+          coords: [50.63314124686462, 5.585845981216874],
           iconUrl: "../../public/walker.svg",
         },
       ],
@@ -66,7 +66,7 @@ export default {
     generateBear() {
       this.markers.push({
         id: 2,
-        coords: [50.457676899890096, 3.9372182785976038],
+        coords: [50.63172938082872, 5.594029813612465],
         iconUrl: ".../../public/ours.svg",
       });
       this.$refs.alert.showAlert(
