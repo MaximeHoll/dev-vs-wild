@@ -71,7 +71,7 @@ const addEntry = async () => {
   await axios.post("http://localhost:5002/api/journal", {
     entry: entry.value,
     entry_type: "entry",
-    coords: "50.461137355448294, 3.9452305086260693",
+    coords: "50.63314124686462, 5.585845981216874",
     id_user: "2",
   });
   window.location.reload();
